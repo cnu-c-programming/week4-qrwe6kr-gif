@@ -7,7 +7,7 @@ int main() {
     
     printf("%.2f\n", sqrt(x));
     printf("%.2f\n", pow(x, y));
-    printf("%.2f\n", ceil(y));
+    printf("%.1f\n", ceil(y));
     printf("%.2f\n", floor(y));
     
     return 0;
