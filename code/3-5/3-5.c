@@ -1,31 +1,26 @@
 #include <stdio.h>
 
+void my_print(char type, void* x) {
+    if (type == 'C') {
+        printf("%c\n", *(char *)x);
+    }
+    else if (type == 'D') {
+        printf("%d\n", *(int *)x);
+    }
+    else if (type == 'S') {
+        printf("%s\n", (char *)x);
+    }
+}
+
 int main() {
-    int a[5] = { 1, 2, 3, 4, 5 };
+    int a = 0x61;
+    char b = 'b';
+    char* c = "hello world";
     
-    for (int i=0; i<5; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
-    
-    int b[5] = { 1, 2 };
-    
-    for (int i=0; i<5; i++) {
-        printf("%d ", b[i]);
-    }
-    printf("\n");
-    
-    int c[5] = { 0 };
-    for (int i=0; i<5; i++) {
-        printf("%d ", c[i]);
-    }
-    printf("\n");
-    
-    int d[] = { 10, 20, 30 };
-    for (int i=0; i<(sizeof(d) / sizeof(int)); i++) {
-        printf("%d ", d[i]);
-    }
-    printf("\n");
+    my_print('C', &a);
+    my_print('D', &b);
+    my_print('S', c);
+    my_print('C', c);
     
     return 0;
 }
