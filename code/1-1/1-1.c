@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int foo(int a, int b);
+extern int foo(int a, int b);
 
 int main() {
    printf("%d\n", foo(1, 2));
