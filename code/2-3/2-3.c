@@ -9,7 +9,7 @@ int main() {
     size_t len = strlen(a);
     printf("length of a: %d\n", len);
 
-    strcpy(c, b);
+    strcpy(a, " world);
     printf("a: %s, c: %s\n", a, c);
 
     strcat(c, "World");
