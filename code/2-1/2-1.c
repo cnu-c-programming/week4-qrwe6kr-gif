@@ -8,7 +8,7 @@ int main() {
     int day;
     
     sscanf(date, "%d-%d-%d", &year, &month, &day);
-    sprintf(buffer, "%d/%02d/%02d", year, month, day);
+    sprintf(buffer, "%d/%d/%d", day, month, year);
 
     printf("%s\n", buffer);
     
