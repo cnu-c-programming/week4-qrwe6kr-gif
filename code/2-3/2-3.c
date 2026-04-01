@@ -3,20 +3,20 @@
 
 int main() {
     char a[64] = "Hello";
-    char b[64] = "world";
+    char b[64] = " world";
     char c[128];
 
     size_t len = strlen(a);
-    printf("length of a: %d\n", len);
+    printf("length of a: %zu\n", len);
 
-    strcpy(a, " world);
+    strcpy(c, a);
     printf("a: %s, c: %s\n", a, c);
 
-    strcat(c, "World");
+    strcat(c, b);
     printf("c: %s\n", c);
 
-    printf("strcmp(%s, %s) = %d\n", a, a, strcmp("Hello", "Hello"));
-    printf("strcmp(%s, %s) = %d\n", a, b, strcmp("Hello", "World"));
+    printf("strcmp(%s, %s) = %d\n", a, a, strcmp(a, a));
+    printf("strcmp(%s, %s) = %d\n", a, b + 1, strcmp(a, b + 1));
 
     return 0;
 }
